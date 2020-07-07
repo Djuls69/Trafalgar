@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Container, Grid, Typography } from '@material-ui/core'
+import { Container, Grid, Typography, Link } from '@material-ui/core'
 import logoWhite from '../img/logo_white.svg'
 
 const useStyles = makeStyles(theme => ({
@@ -36,6 +36,13 @@ const useStyles = makeStyles(theme => ({
       fontWeight: 700,
       fontSize: '2rem',
       cursor: 'text'
+    }
+  },
+  copyright: {
+    color: '#000',
+    margin: '3rem auto 0',
+    '& a': {
+      color: '#fff'
     }
   }
 }))
@@ -87,6 +94,16 @@ const Footer = () => {
               </Grid>
             </Grid>
           </Grid>
+          <Typography className={classes.copyright}>
+            Coded by{' '}
+            <Link underline='none' href='http://www.juliendelusseau.fr'>
+              Julien Delusseau
+            </Link>{' '}
+            &amp; designed by{' '}
+            <Link underline='none' href='https://dribbble.com/musicalryo'>
+              Aryo Pamungkas
+            </Link>
+          </Typography>
         </Grid>
       </Container>
     </footer>
